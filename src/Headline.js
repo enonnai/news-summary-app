@@ -1,5 +1,5 @@
 (function(exports) {
-  var  Headline = function() {
+  var Headline = function() {
 
   };
 

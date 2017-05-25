@@ -1,5 +1,5 @@
 (function(exports) {
-  var  Article = function() {
+  var Article = function() {
 
   };
 
