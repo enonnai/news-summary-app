@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/danielemanuel/News_app#readme",
   "dependencies": {
-    "guardian-js": "^1.0.8",
     "http-server": "^0.10.0"
   }
 }
