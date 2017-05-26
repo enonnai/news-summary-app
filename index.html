@@ -23,7 +23,7 @@
   <!-- //specs -->
   <script src="spec/article-model-spec.js"></script>
   <script src="spec/article-list-spec.js"></script>
-  <script></script>
+  <script src="key.txt"></script>
 
   <button id="ajaxButton" type="button">Make a request</button>
 
@@ -39,9 +39,8 @@
         alert('Giving up :( Cannot create an XMLHTTP instance');
         return false;
       }
-      var key = require("../key.txt");
       httpRequest.onreadystatechange = alertContents;
-      httpRequest.open('GET', "https://content.guardianapis.com/search?api-key=" + key);
+      httpRequest.open('GET', "https://content.guardianapis.com/search?api-key=" + guardianApiKey);
       httpRequest.send();
     }
 
