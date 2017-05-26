@@ -47,7 +47,15 @@
     function alertContents() {
       if (httpRequest.readyState === XMLHttpRequest.DONE) {
         if (httpRequest.status === 200) {
-          document.getElementById("app").innerHTML = httpRequest.responseText;
+          var guardian = JSON.parse(httpRequest.responseText);
+          console.log(guardian)
+          document.getElementById("app").innerHTML = loop();
+
+          loop = function() {
+            for (var i = 0; i < 9; i++) {
+              guardian.response.results[i]
+            }
+          }
         } else {
           alert('There was a problem with the request.');
         }
