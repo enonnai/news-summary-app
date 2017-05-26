@@ -5,7 +5,7 @@
 </head>
 
 <body>
-  <div id="app"></div>
+  <ul id="app"> </ul>
   <script src="./index.js"></script>
   <h3>News App</h3>
   </div>
@@ -49,13 +49,12 @@
         if (httpRequest.status === 200) {
           var guardian = JSON.parse(httpRequest.responseText);
           console.log(guardian)
-          document.getElementById("app").innerHTML = loop();
-
-          loop = function() {
-            for (var i = 0; i < 9; i++) {
-              guardian.response.results[i]
-            }
+          var articles = guardian.response.results;
+          console.log(articles);
+          for (var i = 0; i < articles.length; i++) {
+            document.write("<li>" + articles[i].webTitle + "</li>");
           }
+
         } else {
           alert('There was a problem with the request.');
         }
